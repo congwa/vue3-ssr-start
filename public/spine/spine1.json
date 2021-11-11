@@ -1,0 +1,111 @@
+{
+"skeleton": { "hash": "R+4s1Y7Ka+IZuECRn7qN8KysYJI", "spine": "3.7.94", "width": 771, "height": 771, "images": "./images/", "audio": "" },
+"bones": [
+	{ "name": "root" },
+	{ "name": "weizhi", "parent": "root" },
+	{ "name": "shaoji", "parent": "weizhi", "x": -37, "y": 47.94 },
+	{ "name": "smoke", "parent": "weizhi", "x": -30.54, "y": 241.98, "scaleX": 3, "scaleY": 3 }
+],
+"slots": [
+	{ "name": "UIshaoji", "bone": "shaoji", "attachment": "UIshaoji" },
+	{ "name": "smoke", "bone": "smoke", "attachment": "UITBsjsmoke1", "blend": "additive" }
+],
+"skins": {
+	"default": {
+		"UIshaoji": {
+			"UIshaoji": { "x": 0.5, "width": 439, "height": 278 }
+		},
+		"smoke": {
+			"UITBsjsmoke1": { "x": 0.5, "y": 0.5, "width": 257, "height": 257 },
+			"UITBsjsmoke2": { "x": 0.5, "y": 0.5, "width": 257, "height": 257 },
+			"UITBsjsmoke3": { "x": 0.5, "y": 0.5, "width": 257, "height": 257 },
+			"UITBsjsmoke4": { "x": 0.5, "y": 0.5, "width": 257, "height": 257 },
+			"UITBsjsmoke5": { "x": 0.5, "y": 0.5, "width": 257, "height": 257 },
+			"UITBsjsmoke6": { "x": 0.5, "y": 0.5, "width": 257, "height": 257 },
+			"UITBsjsmoke7": { "x": 0.5, "y": 0.5, "width": 257, "height": 257 },
+			"UITBsjsmoke8": { "x": 0.5, "y": 0.5, "width": 257, "height": 257 },
+			"UITBsjsmoke9": { "x": 0.5, "y": 0.5, "width": 257, "height": 257 },
+			"UITBsjsmoke10": { "x": 0.5, "y": 0.5, "width": 257, "height": 257 },
+			"UITBsjsmoke11": { "x": 0.5, "y": 0.5, "width": 257, "height": 257 },
+			"UITBsjsmoke12": { "x": 0.5, "y": 0.5, "width": 257, "height": 257 },
+			"UITBsjsmoke13": { "x": 0.5, "y": 0.5, "width": 257, "height": 257 },
+			"UITBsjsmoke14": { "x": 0.5, "y": 0.5, "width": 257, "height": 257 },
+			"UITBsjsmoke15": { "x": 0.5, "y": 0.5, "width": 257, "height": 257 },
+			"UITBsjsmoke16": { "x": 0.5, "y": 0.5, "width": 257, "height": 257 },
+			"UITBsjsmoke17": { "x": 0.5, "y": 0.5, "width": 257, "height": 257 },
+			"UITBsjsmoke18": { "x": 0.5, "y": 0.5, "width": 257, "height": 257 },
+			"UITBsjsmoke19": { "x": 0.5, "y": 0.5, "width": 257, "height": 257 },
+			"UITBsjsmoke20": { "x": 0.5, "y": 0.5, "width": 257, "height": 257 },
+			"UITBsjsmoke21": { "x": 0.5, "y": 0.5, "width": 257, "height": 257 },
+			"UITBsjsmoke22": { "x": 0.5, "y": 0.5, "width": 257, "height": 257 },
+			"UITBsjsmoke23": { "x": 0.5, "y": 0.5, "width": 257, "height": 257 },
+			"UITBsjsmoke24": { "x": 0.5, "y": 0.5, "width": 257, "height": 257 },
+			"UITBsjsmoke25": { "x": 0.5, "y": 0.5, "width": 257, "height": 257 },
+			"UITBsjsmoke26": { "x": 0.5, "y": 0.5, "width": 257, "height": 257 },
+			"UITBsjsmoke27": { "x": 0.5, "y": 0.5, "width": 257, "height": 257 },
+			"UITBsjsmoke28": { "x": 0.5, "y": 0.5, "width": 257, "height": 257 },
+			"UITBsjsmoke29": { "x": 0.5, "y": 0.5, "width": 257, "height": 257 },
+			"UITBsjsmoke30": { "x": 0.5, "y": 0.5, "width": 257, "height": 257 },
+			"UITBsjsmoke31": { "x": 0.5, "y": 0.5, "width": 257, "height": 257 },
+			"UITBsjsmoke32": { "x": 0.5, "y": 0.5, "width": 257, "height": 257 },
+			"UITBsjsmoke33": { "x": 0.5, "y": 0.5, "width": 257, "height": 257 },
+			"UITBsjsmoke34": { "x": 0.5, "y": 0.5, "width": 257, "height": 257 },
+			"UITBsjsmoke35": { "x": 0.5, "y": 0.5, "width": 257, "height": 257 },
+			"UITBsjsmoke36": { "x": 0.5, "y": 0.5, "width": 257, "height": 257 },
+			"UITBsjsmoke37": { "x": 0.5, "y": 0.5, "width": 257, "height": 257 },
+			"UITBsjsmoke38": { "x": 0.5, "y": 0.5, "width": 257, "height": 257 },
+			"UITBsjsmoke39": { "x": 0.5, "y": 0.5, "width": 257, "height": 257 },
+			"UITBsjsmoke40": { "x": 0.5, "y": 0.5, "width": 257, "height": 257 }
+		}
+	}
+},
+"animations": {
+	"animation": {
+		"slots": {
+			"smoke": {
+				"attachment": [
+					{ "time": 0.0667, "name": "UITBsjsmoke2" },
+					{ "time": 0.1333, "name": "UITBsjsmoke3" },
+					{ "time": 0.2, "name": "UITBsjsmoke4" },
+					{ "time": 0.2667, "name": "UITBsjsmoke5" },
+					{ "time": 0.3333, "name": "UITBsjsmoke6" },
+					{ "time": 0.4, "name": "UITBsjsmoke7" },
+					{ "time": 0.4667, "name": "UITBsjsmoke8" },
+					{ "time": 0.5333, "name": "UITBsjsmoke9" },
+					{ "time": 0.6, "name": "UITBsjsmoke10" },
+					{ "time": 0.6667, "name": "UITBsjsmoke11" },
+					{ "time": 0.7333, "name": "UITBsjsmoke12" },
+					{ "time": 0.8, "name": "UITBsjsmoke13" },
+					{ "time": 0.8667, "name": "UITBsjsmoke14" },
+					{ "time": 0.9333, "name": "UITBsjsmoke15" },
+					{ "time": 1, "name": "UITBsjsmoke16" },
+					{ "time": 1.0667, "name": "UITBsjsmoke17" },
+					{ "time": 1.1333, "name": "UITBsjsmoke18" },
+					{ "time": 1.2, "name": "UITBsjsmoke19" },
+					{ "time": 1.2667, "name": "UITBsjsmoke20" },
+					{ "time": 1.3333, "name": "UITBsjsmoke21" },
+					{ "time": 1.4, "name": "UITBsjsmoke22" },
+					{ "time": 1.4667, "name": "UITBsjsmoke23" },
+					{ "time": 1.5333, "name": "UITBsjsmoke24" },
+					{ "time": 1.6, "name": "UITBsjsmoke25" },
+					{ "time": 1.6667, "name": "UITBsjsmoke26" },
+					{ "time": 1.7333, "name": "UITBsjsmoke27" },
+					{ "time": 1.8, "name": "UITBsjsmoke28" },
+					{ "time": 1.8667, "name": "UITBsjsmoke29" },
+					{ "time": 1.9333, "name": "UITBsjsmoke30" },
+					{ "time": 2, "name": "UITBsjsmoke31" },
+					{ "time": 2.0667, "name": "UITBsjsmoke32" },
+					{ "time": 2.1333, "name": "UITBsjsmoke33" },
+					{ "time": 2.2, "name": "UITBsjsmoke34" },
+					{ "time": 2.2667, "name": "UITBsjsmoke35" },
+					{ "time": 2.3333, "name": "UITBsjsmoke36" },
+					{ "time": 2.4, "name": "UITBsjsmoke37" },
+					{ "time": 2.4667, "name": "UITBsjsmoke38" },
+					{ "time": 2.5333, "name": "UITBsjsmoke39" },
+					{ "time": 2.6, "name": "UITBsjsmoke40" }
+				]
+			}
+		}
+	}
+}
+}
