@@ -5,11 +5,9 @@ import vueJsxPlugin from '@vitejs/plugin-vue-jsx'
 import path from 'path'
 import legacy from '@vitejs/plugin-legacy'
 
-// https://vitejs.dev/config/
 export default defineConfig({
     base: '/',
     build: {
-      // minify: false
     },
     resolve: {
       alias: {
@@ -19,13 +17,12 @@ export default defineConfig({
     css: {
       preprocessorOptions: {
         less: {
-          // modifyVars:{},
           javascriptEnabled: true
         }
       }
     },
     optimizeDeps: {
-      include: ['vue', 'vue-router', 'vant'],
+      include: ['vue', 'vue-router', 'vant', 'ant-design-vue'],
     },
     ssr: {
       external: ['amfe-flexible']
@@ -45,7 +42,17 @@ export default defineConfig({
             resolveComponent: (name) => {
               return `vant/lib/${name}`
             }
-          }
+          },
+          {
+            libraryName: 'ant-design-vue',
+            esModule: true,
+            resolveStyle: (name) => {
+              return `ant-design-vue/es/${name}/style/index`
+            },
+            resolveComponent: (name) => {
+              return `ant-design-vue/lib/${name}`
+            }
+          },
         ]
       })
     ]

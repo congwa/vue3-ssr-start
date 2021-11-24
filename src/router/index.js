@@ -13,8 +13,6 @@ import layout from '../layout/index.vue'
 
 export function createRouter (SXO, interact, session) {
   const router = _createRouter({
-    // use appropriate history implementation for server/client
-    // import.meta.env.SSR is injected by Vite.
     history: import.meta.env.SSR ? createMemoryHistory() : createWebHistory(),
     routes: [
       {
@@ -46,13 +44,13 @@ export function createRouter (SXO, interact, session) {
   router.afterEach((to, from) => {
     interact.progressBar.end()
     SXO.setSEO({
-      title: to.meta.title || 'game-2022',
-      description: to.meta.description || 'Prefetch and sync state to client with one line of code, out-of-the-box',
-      keywords: to.meta.keywords || 'ssr,tailwindcss,vue3,vite,composition-api'
+      title: to.meta.title || '',
+      description: to.meta.description || '',
+      keywords: to.meta.keywords || ''
     })
     SXO.setSMO({
-      title: to.meta.title || 'game-2022',
-      description: to.meta.description || 'Prefetch and sync state to client with one line of code, out-of-the-box',
+      title: to.meta.title || '',
+      description: to.meta.description || '',
       image: '/assets/logo.png',
       url: `${session.host.value}${to.fullPath}`
     })

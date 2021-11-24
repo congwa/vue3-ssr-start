@@ -1,5 +1,5 @@
 module.exports = {
-  port: '3001',
+  port: '8888',
   proxy: {
     '/api': {
       target: 'http://localhost:4000',

@@ -1,27 +1,28 @@
 import { watch, onMounted } from 'vue'
 import { INTERACT_MSG_TYPE, useInteract, useSession } from '../hooks/app'
+import { message, Modal } from 'ant-design-vue'
 import { Toast, Dialog } from 'vant'
 
 function showToast (platform, content, type, duration) {
   switch (type) {
     case INTERACT_MSG_TYPE.INFO:
       platform === 'PC'
-        ? Toast({ message: content, duration })
+        ? message.info(content, duration / 1000)
         : Toast({ message: content, duration })
       break
     case INTERACT_MSG_TYPE.SUCCESS:
       platform === 'PC'
-        ? Toast({ type: 'success', message: content, duration })
+        ? message.success(content, duration / 1000)
         : Toast({ type: 'success', message: content, duration })
       break
     case INTERACT_MSG_TYPE.WARNING:
       platform === 'PC'
-        ? Toast({ type: 'fail', message: content, duration })
+        ? message.warning(content, duration / 1000)
         : Toast({ type: 'fail', message: content, duration })
       break
     case INTERACT_MSG_TYPE.ERROR:
       platform === 'PC'
-        ? Toast({ type: 'fail', message: content, duration })
+        ? message.error(content, duration / 1000)
         : Toast({ type: 'fail', message: content, duration })
       break
   }
@@ -29,7 +30,20 @@ function showToast (platform, content, type, duration) {
 
 function showModal (platform, title, content, type) {
   if (platform === 'PC') {
-    Dialog.alert({ title, message: content, theme: 'round-button', confirmButtonText: type === INTERACT_MSG_TYPE.ERROR ? '真遗憾' : '好的' })
+    switch (type) {
+      case INTERACT_MSG_TYPE.INFO:
+        Modal.info({ title, content, okText: '好的' })
+        break
+      case INTERACT_MSG_TYPE.SUCCESS:
+        Modal.success({ title, content, okText: '好的' })
+        break
+      case INTERACT_MSG_TYPE.WARNING:
+        Modal.warning({ title, content, okText: '好的' })
+        break
+      case INTERACT_MSG_TYPE.ERROR:
+        Modal.error({ title, content, okText: '真遗憾' })
+        break
+    }
   } else {
     Dialog.alert({ title, message: content, theme: 'round-button', confirmButtonText: type === INTERACT_MSG_TYPE.ERROR ? '真遗憾' : '好的' })
   }
@@ -72,19 +86,18 @@ export default function interactImplement (progressBarRef) {
     })
 
     watch(() => interactState.confirmOption, ({ type, title, content, showCancelButton, cancelButtonText, confirmButtonText, resolveConfirm, resolveCancel }) => {
-      // todo 根据type来渲染icon
       if (platform.value === 'PC') {
-        Dialog.confirm({
+        Modal.confirm({
           title: title,
-          message: content,
-          showCancelButton: showCancelButton,
-          confirmButtonText,
-          cancelButtonText,
-          theme: 'round'
-        }).then(() => {
-          resolveConfirm && resolveConfirm()
-        }).catch(() => {
-          resolveCancel && resolveCancel()
+          content: content,
+          cancelText: showCancelButton ? cancelButtonText : '',
+          okText: confirmButtonText,
+          onOk () {
+            resolveConfirm && resolveConfirm()
+          },
+          onCancel () {
+            resolveCancel && resolveCancel()
+          }
         })
       } else {
         Dialog.confirm({

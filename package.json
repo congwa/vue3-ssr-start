@@ -1,6 +1,6 @@
 {
-  "name": "game-2022-end",
-  "description": "bimed",
+  "name": "ssr",
+  "description": "SSR",
   "author": "wangcong",
   "private": true,
   "version": "1.0.0",
@@ -11,7 +11,6 @@
     "build:client": "vite build --outDir dist/client --ssrManifest",
     "build:server": "vite build --outDir dist/server --ssr src/entry-server.js",
     "build": "npm run lint && npm run build:client && npm run build:server",
-    "commit": "git-cz",
     "start": "cross-env NODE_ENV=stag node server"
   },
   "dependencies": {
@@ -27,8 +26,8 @@
     "uuid": "^8.3.2",
     "vant": "^3.2.3",
     "vue": "^3.2.11",
-    "vue-i18n": "^9.2.0-beta.17",
-    "vue-router": "^4.0.11"
+    "vue-router": "^4.0.11",
+    "ant-design-vue": "2.2.8"
   },
   "devDependencies": {
     "@commitlint/cli": "^12.0.1",
@@ -39,13 +38,10 @@
     "@vue/compiler-sfc": "^3.2.11",
     "@vue/eslint-config-standard": "^6.1.0",
     "@vue/server-renderer": "^3.2.11",
-    "amfe-flexible": "^2.2.1",
     "autoprefixer": "^10.2.5",
-    "commitizen": "^4.2.3",
     "compression": "^1.7.4",
     "cookie-parser": "^1.4.5",
     "cross-env": "^7.0.3",
-    "cz-customizable": "^6.3.0",
     "eslint": "^7.24.0",
     "eslint-plugin-import": "^2.22.1",
     "eslint-plugin-node": "^11.1.0",

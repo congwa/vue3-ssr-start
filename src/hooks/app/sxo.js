@@ -12,7 +12,6 @@ export function createSXO (app, syncState) {
     description: '',
     keywords: ''
   })
-  // https://ogp.me/
   const SMO = ref({
     title: '',
     description: '',
